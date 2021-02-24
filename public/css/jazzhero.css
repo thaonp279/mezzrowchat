@@ -1,0 +1,90 @@
+body {
+  background: black;
+  color: white;
+  font-family: "Libre Baskerville";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+#hero-container {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.hero {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  margin: 15px;
+  box-shadow: 5px 5px 0 #A72831;
+}
+
+.hero img {
+  border-radius: 8px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+#demo {
+  margin: 20px;
+
+}
+
+#demo *{
+  display: inline;
+}
+
+#message {
+  width: max-content;
+  height: max-content;
+  background: #4A9AB1;
+  color: black;
+  padding: 5px;
+  margin: 10px;
+}
+
+button {
+  font-family: "Libre Baskerville";
+  padding: 5px;
+  width: 100px;
+  background: #A72831;
+  border: solid #A72831;
+  border-radius: 5px;
+  color: white;
+}
+
+.radio {
+  display: none;
+}
+
+input:checked + img {
+  box-shadow: 5px 5px 2px #4A9AB1;
+}
+
+#select-button {
+  margin-top: 50px;
+  font-family: "Libre Baskerville";
+  padding: 5px;
+  width: 100px;
+  background: #A72831;
+  border: solid #A72831;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

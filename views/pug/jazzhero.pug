@@ -1,0 +1,44 @@
+html
+  head
+    title Mezzrow Chat Lounge
+    meta(name='description', content='Choose your jazz hero')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    script(src="https://kit.fontawesome.com/2e73c01fb6.js" crossorigin="anonymous")
+    link(href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="public/css/jazzhero.css")
+    script(type='text/javascript' src='public/js/jazzhero.js')
+    
+  body
+    - 
+      var f = JSON.stringify(first)
+      var l = JSON.stringify(last)
+
+    h1 Choose Your Jazz Hero
+    form(action='/chosehero', method='post')
+      #hero-container
+        label.hero(for='ladyday')
+          input.radio(type='radio' name='hero' value='ladyday' id='ladyday' checked)
+          img#ladyday(src='public/img/ladyday.jpg' onclick='chatDemo(event,'+f+','+l+')')
+        label.hero(for='prez')
+          input.radio(type='radio' name='hero' value='prez' id='prez')
+          img#prez(src='public/img/prez.jpg' onclick='chatDemo(event,'+f+','+l+')')
+        label.hero(for='cannonball')
+          input.radio(type='radio' name='hero' value='cannonball' id='cannonball')
+          img#cannonball(src='public/img/cannonball.jpg' onclick='chatDemo(event,'+f+','+l+')')
+        label.hero(for='chet')
+          input.radio(type='radio' name='hero' value='chet' id='chet')
+          img#chet(src='public/img/chet.jpg' onclick='chatDemo(event,'+f+','+l+')')
+        label.hero
+          input.radio(type='radio' name='hero' value='rabbit' id='rabbit')
+          img#rabbit(src='public/img/rabbit.jpg' onclick='chatDemo(event,'+f+','+l+')')
+
+      #demo-title Chat preview
+      #demo
+        #name lady #{last.toLowerCase()}
+        #message Don't threaten me with love, baby. Let's just go walking in the rain. 🌧
+        #send
+          button(type='button') Send
+      input(type='submit' value='Select' id='select-button')

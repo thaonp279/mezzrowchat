@@ -1,0 +1,35 @@
+html
+  head
+    title Mezzrow Chat Lounge
+    meta(name='description', content='Home page')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    script(src="https://kit.fontawesome.com/2e73c01fb6.js" crossorigin="anonymous")
+
+    link(href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="public/css/index.css")
+    
+
+  body
+  
+    .container#img-container
+      img(src="public/img/header.jpg")
+    .container#login-container
+      h1 Mezzrow Chat Lounge
+      #login-box
+        #login-header
+          h2 Sign up
+          a(href="/") Log in
+        form(action='/register', method='post')
+          label(for='name') Full Name:
+          input(type='text', name='name')
+
+          label(for='username') Username:
+          input(type='text', name='username')
+          
+          label(for='password') Password:
+          input(type='password', name='password')
+          
+          input(type='submit', id='login-button', value='Sign up')

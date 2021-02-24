@@ -1,0 +1,191 @@
+body {
+  background: black;
+  font-family: 'Libre Baskerville', serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  width: 90%;
+  height: 95%;
+  background: white;
+  display: flex;
+  margin: auto;
+}
+
+p {
+  font-family: Garamond;
+  font-size: 15px;
+}
+
+/*containers*/
+
+#chat-nav {
+  flex: 0 0 220px;
+  background: #474747;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#chat-preview {
+  background: #474747;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* items in both containers*/
+.nav-bar {
+  height: 30px;
+  background: #A72831;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+.content {
+  height: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+/* current chat - content container*/
+#messages {
+  height: 85%;
+  background: white;
+  margin: 0 10px;
+  overflow: scroll;
+  list-style-type:none;
+  padding: 0 5px 5px;
+
+}
+
+/* content - message*/
+li {
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+.mine {
+  flex-direction: row-reverse;
+}
+.theirs {
+  flex-direction: row;
+}
+
+/*message - avatar*/
+.avatar {
+  height: 30px;
+  width: 30px;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* message - text */
+.text {
+  margin: 0 1em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.text * {
+  margin: 0.5em;
+}
+
+.mine .text{
+  background: #A72831;
+  color: white;
+}
+
+.theirs .text {
+  background: #EBEBEB;
+}
+
+/* content - status*/
+.status {
+  margin: 0 45px;
+  padding: 0 1em;
+  line-height: 2em;
+  background: #4A9AB1;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* content - typing*/
+.typing {
+  margin-left: 50px;
+}
+
+/*current chat - input*/
+form {
+  margin: 0 10px 10px;
+  background: white;
+  border-top: solid #474747 1px;
+  display: flex;
+}
+
+input {
+  flex-grow: 1;
+  margin: 10px;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  margin: 15px;
+  border-radius: 50%;
+  background: #A72831;
+  border: none;
+  color: white;
+}
+
+
+/*other chats*/
+.room {
+  height: 70px;
+  background: #EBEBEB;
+  border-radius: 5px;
+  margin: 10px 0 10px 10px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.active {
+  background: #4A9AB1;
+  color: white;
+}
+
+
+.fa-exclamation {
+  margin-left: 5px;
+  font-size: 0.5em;
+  padding: 5px 10px;
+  background: #E93743;
+  border-radius: 5px;
+  color: white;
+}
+
+/*media queries*/
+@media only screen and (max-width: 600px) {
+  #chat-nav {
+    flex: 0 0 125px;
+  }
+}
