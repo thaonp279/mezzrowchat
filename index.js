@@ -26,8 +26,8 @@ const io = require('socket.io')(http);
 const passportSocketIo = require('passport.socketio');
 
 //session store
-const MongoStore = require('connect-mongo')(session);
-const store = new MongoStore({ url: process.env.MONGO_URI});
+const MongoStore = require('connect-mongo').default;
+const store = MongoStore.create({ mongoUrl: process.env.MONGO_URI});
 const cookieParser = require('cookie-parser');
 
 //set up pug, css
