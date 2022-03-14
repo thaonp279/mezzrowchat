@@ -1,5 +1,5 @@
 # Mezzrow Chat Lounge
-Where jazz lovers convenene
+Where jazz lovers convene
 
 Inspired by my favorite jazz bar in NYC, I built this chat app where you can embody your favorite jazz hero and meet with other jazz lovers.
 
